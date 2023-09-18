@@ -1,8 +1,6 @@
-import os
-import transformers
 from flair.data import Sentence
 from flair.models import SequenceTagger
-from flair.embeddings import TransformerWordEmbeddings, TransformerDocumentEmbeddings
+from flair.embeddings import TransformerWordEmbeddings
 
 
 ckpt = "./checkpoints/best-model.pt"
