@@ -1,12 +1,13 @@
 # NER-Flair-ONNX
 - This code is used to convert and infer sequence-tagger model in ONNX type.
 - Move model to `/checkpoints/best-model.pt`
-- Move tag dictionary to `/tag_dictionary/tag_dictionary.pkl` via this command when training:
+- Save and move tag dictionary to `/tag_dictionary/tag_dictionary.pkl` via:
 ```
 tag_dictionary.save("./tag_dictionary/tag_dictionary.pkl")
 ```
+when traning
 
-### Installing
+### Environment
 - To create virtual environment `venv`:
 ```
 virtualenv venv
