@@ -1,2 +1,4 @@
 **/*.pt
 **/__pycache__/
+**/*.onnx
+/venv/

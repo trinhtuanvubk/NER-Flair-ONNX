@@ -1,10 +1,10 @@
-import ner_onnx
-import util
+import export_onnx
+import args
 
 def main():
-    args = util.get_args()
-    method = getattr(ner_onnx, args.scenario)
-    method(args)
+    opt = args.get_args()
+    method = getattr(export_onnx, opt.scenario)
+    method(opt)
 
 
 if __name__ == "__main__":

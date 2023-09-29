@@ -1,3 +1,5 @@
 flair==0.12.2
 transformers==4.30.2
-torch
+torch==2.0.0
+onnx==1.11.0
+onnxruntime==1.11.1
