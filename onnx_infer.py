@@ -47,7 +47,7 @@ base_embeddings = TransformerWordEmbeddings(
             layers="-1,-2,-3,-4",
             layer_mean=False,
             allow_long_sentences=True,
-            force_device=torch.device("cpu")
+            force_device=torch.device("cuda")
         )
 
 

@@ -6,7 +6,7 @@ import torch
 
 def convert_embedding(args):
 
-    model = SequenceTagger.load(args.model_path)
+    model = SequenceTagger.load(args.model_path).to(torch.device('cuda'))
     embedding = model.embeddings
     assert isinstance(embedding, (TransformerWordEmbeddings))
 
@@ -16,6 +16,7 @@ def convert_embedding(args):
     # model.embeddings = model.embeddings.export_onnx("flert-embeddings_2.onnx", sentences, providers=["CUDAExecutionProvider", "CPUExecutionProvider"])
 
     example_tensors = embedding.prepare_tensors(sentences)
+    print(example_tensors)
     dynamic_axes = {"input_ids": {0: 'batch', 1: "seq_length"},
                     "token_lengths": {0: 'sent-count'},
                     "attention_mask": {0: "batch", 1: "seq_length"},
