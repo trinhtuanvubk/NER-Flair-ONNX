@@ -40,3 +40,8 @@ python3 main.py --scenario test
 ```
 python3 onnx_infer.py
 ```
+
+### TODO
+
+- [ ] Check cuda providers
+- [ ] Deploy on triton
